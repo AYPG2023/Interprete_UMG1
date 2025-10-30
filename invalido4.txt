@@ -1,0 +1,21 @@
+<funcion>
+  <parametros>x, y</parametros>
+  <codigo>
+    x = 10$;
+    <if>
+      <condicion>x => 10</condicion>
+      <codigo>y = 2;</codigo>
+    </if>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id1, 33</parametros>
+  <codigo>
+    a = 1;
+    <do>
+      <codigo>a = a + 1;</codigo>
+      <condicion>a < 5</condicion>
+    </do>
+  </codigo>
+</funcion>

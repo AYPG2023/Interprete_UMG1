@@ -1,0 +1,18 @@
+<funcion>
+  <parametros>p, q, 5</parametros>
+  <codigo>
+    a = 1;
+    b = 2;
+    <if>
+      <condicion>p > 0 && q < 10</condicion>
+      <codigo>c = 3;</codigo>
+    </if>
+    <do>
+      <codigo>
+        a = a + b;
+        d = 7;
+      </codigo>
+      <condicion>a < 10 && d == 7</condicion>
+    </do>
+  </codigo>
+</funcion>
