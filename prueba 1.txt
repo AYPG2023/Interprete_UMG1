@@ -1,0 +1,52 @@
+<funcion>
+  <parametros>x, y, 5</parametros>
+  <codigo>
+    x = 10;
+    y = x;
+    <if>
+      <condicion>x > 0 and y < 20</condicion>
+      <codigo>
+        z = 100;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        x = x + 1;
+      </codigo>
+      <condicion>x < 50</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>a, b, 15</parametros>
+  <codigo>
+    a = 0;
+    b = 5;
+    <if>
+      <condicion>a < b and b < 100</condicion>
+      <codigo>
+        c = b * 2;
+      </codigo>
+    </if>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>10, id1, id2</parametros>
+  <codigo>
+    id1 = 5;
+    <if>
+      <condicion>id1 > 0 and id2 < 5</condicion>
+      <codigo>
+        result = id1 + id2;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id1 = id1 + 1;
+      </codigo>
+      <condicion>id1 < 20</condicion>
+    </do>
+  </codigo>
+</funcion>

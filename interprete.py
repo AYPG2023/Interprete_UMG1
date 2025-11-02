@@ -46,12 +46,12 @@ TOKEN_SPECIFICATION = [
     ("RPAREN", r"\)"),
     ("COMMA", r","),
     ("SEMICOLON", r";"),
-    ("STRING", r'"([^"\\]|\\.)*"'),
+    ("STRING",      r"\"([^\"\\]|\\.)*\""),
     ("NUMBER", r"\d+"),
     ("IDENT", r"[a-zA-Z_][a-zA-Z0-9_]*"),
     ("NEWLINE", r"\n"),
     ("SKIP", r"[ \t\r]+"),
-    ("SYMBOL", r"[@#$%.,]"),
+    ("SYMBOL", r"[¡!¿?@#$%.:,]"),
     ("MISMATCH", r"."),
 ]
 
@@ -758,7 +758,7 @@ def main(filename: str) -> None:
 
 
 if __name__ == "__main__":
-    input_file = "B_mixto_parametros_y_errores_con_dos_funciones.txt"
+    input_file = "prueba 6.txt"
     input_path = Path(input_file)
 
     if not input_path.exists():

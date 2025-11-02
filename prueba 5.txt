@@ -1,0 +1,104 @@
+<funcion>
+  <parametros>x, y, z</parametros>
+  <codigo>
+    x = 10;
+    y = 20;
+    <if>
+      <condicion>x > 0 and y < 50</condicion>
+      <codigo>
+        z = 100;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        x = x + 1;
+      </codigo>
+      <condicion>x < 15</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>a, b, c</parametros>
+  <codigo>
+    a = 1;
+    b = 2;
+    c = a + b;
+    <if>
+      <condicion>a < b</condicion>
+      <codigo>
+        result = b - a;
+      </codigo>
+    </if>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id1, id2, id3</parametros>
+  <codigo>
+    id1 = 10;
+    id2 = 5;
+    <if>
+      <condicion>id1 > id2</condicion>
+      <codigo>
+        total = id1 + id2;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id1 = id1 - 1;
+      </codigo>
+      <condicion>id1 > 0</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>p1, p2</parametros>
+  <codigo>
+    p1 = 0;
+    p2 = 10;
+    <if>
+      <condicion>p1 < p2</condicion>
+      <codigo>
+        diff = p2 - p1;
+      </codigo>
+    </if>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>x1, x2, n</parametros>
+  <codigo>
+    x1 = 1;
+    x2 = 0;
+    <do>
+      <codigo>
+        x2 = x2 + x1;
+        x1 = x1 + 1;
+      </codigo>
+      <condicion>x1 < n</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>a, b, limit</parametros>
+  <codigo>
+    a = 5;
+    b = 0;
+    <do>
+      <codigo>
+        b = b + a;
+        a = a - 1;
+      </codigo>
+      <condicion>a > 0</condicion>
+    </do>
+    <if>
+      <condicion>b > limit</condicion>
+      <codigo>
+        msg = "Proceso finalizado";
+      </codigo>
+    </if>
+  </codigo>
+</funcion>

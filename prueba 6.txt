@@ -1,0 +1,2000 @@
+<funcion>
+  <parametros>id1, id2, id3</parametros>
+  <codigo>
+    id1 = 5;
+    id2 = id1 + 2;
+    <if>
+      <condicion>id1 < id2 and id2 < 15</condicion>
+      <codigo>
+        id3 = id2 - id1;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id1 = id1 + 1;
+      </codigo>
+      <condicion>id1 < 15</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id4, id5, id6</parametros>
+  <codigo>
+    id4 = 10;
+    id5 = id4 + 4;
+    <if>
+      <condicion>id4 < id5 and id5 < 20</condicion>
+      <codigo>
+        id6 = id5 - id4;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id4 = id4 + 1;
+      </codigo>
+      <condicion>id4 < 20</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id7, id8, id9</parametros>
+  <codigo>
+    id7 = 15;
+    id8 = id7 + 6;
+    <if>
+      <condicion>id7 < id8 and id8 < 25</condicion>
+      <codigo>
+        id9 = id8 - id7;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id7 = id7 + 1;
+      </codigo>
+      <condicion>id7 < 25</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id10, id11, id12</parametros>
+  <codigo>
+    id10 = 20;
+    id11 = id10 + 8;
+    <if>
+      <condicion>id10 < id11 and id11 < 30</condicion>
+      <codigo>
+        id12 = id11 - id10;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id10 = id10 + 1;
+      </codigo>
+      <condicion>id10 < 30</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id13, id14, id15</parametros>
+  <codigo>
+    id13 = 25;
+    id14 = id13 + 10;
+    <if>
+      <condicion>id13 < id14 and id14 < 35</condicion>
+      <codigo>
+        id15 = id14 - id13;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id13 = id13 + 1;
+      </codigo>
+      <condicion>id13 < 35</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id16, id17, id18</parametros>
+  <codigo>
+    id16 = 30;
+    id17 = id16 + 12;
+    <if>
+      <condicion>id16 < id17 and id17 < 40</condicion>
+      <codigo>
+        id18 = id17 - id16;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id16 = id16 + 1;
+      </codigo>
+      <condicion>id16 < 40</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id19, id20, id21</parametros>
+  <codigo>
+    id19 = 35;
+    id20 = id19 + 14;
+    <if>
+      <condicion>id19 < id20 and id20 < 45</condicion>
+      <codigo>
+        id21 = id20 - id19;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id19 = id19 + 1;
+      </codigo>
+      <condicion>id19 < 45</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id22, id23, id24</parametros>
+  <codigo>
+    id22 = 40;
+    id23 = id22 + 16;
+    <if>
+      <condicion>id22 < id23 and id23 < 50</condicion>
+      <codigo>
+        id24 = id23 - id22;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id22 = id22 + 1;
+      </codigo>
+      <condicion>id22 < 50</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id25, id26, id27</parametros>
+  <codigo>
+    id25 = 45;
+    id26 = id25 + 18;
+    <if>
+      <condicion>id25 < id26 and id26 < 55</condicion>
+      <codigo>
+        id27 = id26 - id25;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id25 = id25 + 1;
+      </codigo>
+      <condicion>id25 < 55</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id28, id29, id30</parametros>
+  <codigo>
+    id28 = 50;
+    id29 = id28 + 20;
+    <if>
+      <condicion>id28 < id29 and id29 < 60</condicion>
+      <codigo>
+        id30 = id29 - id28;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id28 = id28 + 1;
+      </codigo>
+      <condicion>id28 < 60</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id31, id32, id33</parametros>
+  <codigo>
+    id31 = 55;
+    id32 = id31 + 22;
+    <if>
+      <condicion>id31 < id32 and id32 < 65</condicion>
+      <codigo>
+        id33 = id32 - id31;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id31 = id31 + 1;
+      </codigo>
+      <condicion>id31 < 65</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id34, id35, id36</parametros>
+  <codigo>
+    id34 = 60;
+    id35 = id34 + 24;
+    <if>
+      <condicion>id34 < id35 and id35 < 70</condicion>
+      <codigo>
+        id36 = id35 - id34;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id34 = id34 + 1;
+      </codigo>
+      <condicion>id34 < 70</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id37, id38, id39</parametros>
+  <codigo>
+    id37 = 65;
+    id38 = id37 + 26;
+    <if>
+      <condicion>id37 < id38 and id38 < 75</condicion>
+      <codigo>
+        id39 = id38 - id37;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id37 = id37 + 1;
+      </codigo>
+      <condicion>id37 < 75</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id40, id41, id42</parametros>
+  <codigo>
+    id40 = 70;
+    id41 = id40 + 28;
+    <if>
+      <condicion>id40 < id41 and id41 < 80</condicion>
+      <codigo>
+        id42 = id41 - id40;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id40 = id40 + 1;
+      </codigo>
+      <condicion>id40 < 80</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id43, id44, id45</parametros>
+  <codigo>
+    id43 = 75;
+    id44 = id43 + 30;
+    <if>
+      <condicion>id43 < id44 and id44 < 85</condicion>
+      <codigo>
+        id45 = id44 - id43;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id43 = id43 + 1;
+      </codigo>
+      <condicion>id43 < 85</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id46, id47, id48</parametros>
+  <codigo>
+    id46 = 80;
+    id47 = id46 + 32;
+    <if>
+      <condicion>id46 < id47 and id47 < 90</condicion>
+      <codigo>
+        id48 = id47 - id46;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id46 = id46 + 1;
+      </codigo>
+      <condicion>id46 < 90</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id49, id50, id51</parametros>
+  <codigo>
+    id49 = 85;
+    id50 = id49 + 34;
+    <if>
+      <condicion>id49 < id50 and id50 < 95</condicion>
+      <codigo>
+        id51 = id50 - id49;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id49 = id49 + 1;
+      </codigo>
+      <condicion>id49 < 95</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id52, id53, id54</parametros>
+  <codigo>
+    id52 = 90;
+    id53 = id52 + 36;
+    <if>
+      <condicion>id52 < id53 and id53 < 100</condicion>
+      <codigo>
+        id54 = id53 - id52;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id52 = id52 + 1;
+      </codigo>
+      <condicion>id52 < 100</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id55, id56, id57</parametros>
+  <codigo>
+    id55 = 95;
+    id56 = id55 + 38;
+    <if>
+      <condicion>id55 < id56 and id56 < 105</condicion>
+      <codigo>
+        id57 = id56 - id55;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id55 = id55 + 1;
+      </codigo>
+      <condicion>id55 < 105</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id58, id59, id60</parametros>
+  <codigo>
+    id58 = 100;
+    id59 = id58 + 40;
+    <if>
+      <condicion>id58 < id59 and id59 < 110</condicion>
+      <codigo>
+        id60 = id59 - id58;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id58 = id58 + 1;
+      </codigo>
+      <condicion>id58 < 110</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id61, id62, id63</parametros>
+  <codigo>
+    id61 = 105;
+    id62 = id61 + 42;
+    <if>
+      <condicion>id61 < id62 and id62 < 115</condicion>
+      <codigo>
+        id63 = id62 - id61;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id61 = id61 + 1;
+      </codigo>
+      <condicion>id61 < 115</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id64, id65, id66</parametros>
+  <codigo>
+    id64 = 110;
+    id65 = id64 + 44;
+    <if>
+      <condicion>id64 < id65 and id65 < 120</condicion>
+      <codigo>
+        id66 = id65 - id64;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id64 = id64 + 1;
+      </codigo>
+      <condicion>id64 < 120</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id67, id68, id69</parametros>
+  <codigo>
+    id67 = 115;
+    id68 = id67 + 46;
+    <if>
+      <condicion>id67 < id68 and id68 < 125</condicion>
+      <codigo>
+        id69 = id68 - id67;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id67 = id67 + 1;
+      </codigo>
+      <condicion>id67 < 125</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id70, id71, id72</parametros>
+  <codigo>
+    id70 = 120;
+    id71 = id70 + 48;
+    <if>
+      <condicion>id70 < id71 and id71 < 130</condicion>
+      <codigo>
+        id72 = id71 - id70;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id70 = id70 + 1;
+      </codigo>
+      <condicion>id70 < 130</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id73, id74, id75</parametros>
+  <codigo>
+    id73 = 125;
+    id74 = id73 + 50;
+    <if>
+      <condicion>id73 < id74 and id74 < 135</condicion>
+      <codigo>
+        id75 = id74 - id73;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id73 = id73 + 1;
+      </codigo>
+      <condicion>id73 < 135</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id76, id77, id78</parametros>
+  <codigo>
+    id76 = 130;
+    id77 = id76 + 52;
+    <if>
+      <condicion>id76 < id77 and id77 < 140</condicion>
+      <codigo>
+        id78 = id77 - id76;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id76 = id76 + 1;
+      </codigo>
+      <condicion>id76 < 140</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id79, id80, id81</parametros>
+  <codigo>
+    id79 = 135;
+    id80 = id79 + 54;
+    <if>
+      <condicion>id79 < id80 and id80 < 145</condicion>
+      <codigo>
+        id81 = id80 - id79;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id79 = id79 + 1;
+      </codigo>
+      <condicion>id79 < 145</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id82, id83, id84</parametros>
+  <codigo>
+    id82 = 140;
+    id83 = id82 + 56;
+    <if>
+      <condicion>id82 < id83 and id83 < 150</condicion>
+      <codigo>
+        id84 = id83 - id82;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id82 = id82 + 1;
+      </codigo>
+      <condicion>id82 < 150</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id85, id86, id87</parametros>
+  <codigo>
+    id85 = 145;
+    id86 = id85 + 58;
+    <if>
+      <condicion>id85 < id86 and id86 < 155</condicion>
+      <codigo>
+        id87 = id86 - id85;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id85 = id85 + 1;
+      </codigo>
+      <condicion>id85 < 155</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id88, id89, id90</parametros>
+  <codigo>
+    id88 = 150;
+    id89 = id88 + 60;
+    <if>
+      <condicion>id88 < id89 and id89 < 160</condicion>
+      <codigo>
+        id90 = id89 - id88;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id88 = id88 + 1;
+      </codigo>
+      <condicion>id88 < 160</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id91, id92, id93</parametros>
+  <codigo>
+    id91 = 155;
+    id92 = id91 + 62;
+    <if>
+      <condicion>id91 < id92 and id92 < 165</condicion>
+      <codigo>
+        id93 = id92 - id91;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id91 = id91 + 1;
+      </codigo>
+      <condicion>id91 < 165</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id94, id95, id96</parametros>
+  <codigo>
+    id94 = 160;
+    id95 = id94 + 64;
+    <if>
+      <condicion>id94 < id95 and id95 < 170</condicion>
+      <codigo>
+        id96 = id95 - id94;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id94 = id94 + 1;
+      </codigo>
+      <condicion>id94 < 170</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id97, id98, id99</parametros>
+  <codigo>
+    id97 = 165;
+    id98 = id97 + 66;
+    <if>
+      <condicion>id97 < id98 and id98 < 175</condicion>
+      <codigo>
+        id99 = id98 - id97;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id97 = id97 + 1;
+      </codigo>
+      <condicion>id97 < 175</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id100, id101, id102</parametros>
+  <codigo>
+    id100 = 170;
+    id101 = id100 + 68;
+    <if>
+      <condicion>id100 < id101 and id101 < 180</condicion>
+      <codigo>
+        id102 = id101 - id100;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id100 = id100 + 1;
+      </codigo>
+      <condicion>id100 < 180</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id103, id104, id105</parametros>
+  <codigo>
+    id103 = 175;
+    id104 = id103 + 70;
+    <if>
+      <condicion>id103 < id104 and id104 < 185</condicion>
+      <codigo>
+        id105 = id104 - id103;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id103 = id103 + 1;
+      </codigo>
+      <condicion>id103 < 185</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id106, id107, id108</parametros>
+  <codigo>
+    id106 = 180;
+    id107 = id106 + 72;
+    <if>
+      <condicion>id106 < id107 and id107 < 190</condicion>
+      <codigo>
+        id108 = id107 - id106;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id106 = id106 + 1;
+      </codigo>
+      <condicion>id106 < 190</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id109, id110, id111</parametros>
+  <codigo>
+    id109 = 185;
+    id110 = id109 + 74;
+    <if>
+      <condicion>id109 < id110 and id110 < 195</condicion>
+      <codigo>
+        id111 = id110 - id109;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id109 = id109 + 1;
+      </codigo>
+      <condicion>id109 < 195</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id112, id113, id114</parametros>
+  <codigo>
+    id112 = 190;
+    id113 = id112 + 76;
+    <if>
+      <condicion>id112 < id113 and id113 < 200</condicion>
+      <codigo>
+        id114 = id113 - id112;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id112 = id112 + 1;
+      </codigo>
+      <condicion>id112 < 200</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id115, id116, id117</parametros>
+  <codigo>
+    id115 = 195;
+    id116 = id115 + 78;
+    <if>
+      <condicion>id115 < id116 and id116 < 205</condicion>
+      <codigo>
+        id117 = id116 - id115;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id115 = id115 + 1;
+      </codigo>
+      <condicion>id115 < 205</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id118, id119, id120</parametros>
+  <codigo>
+    id118 = 200;
+    id119 = id118 + 80;
+    <if>
+      <condicion>id118 < id119 and id119 < 210</condicion>
+      <codigo>
+        id120 = id119 - id118;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id118 = id118 + 1;
+      </codigo>
+      <condicion>id118 < 210</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id121, id122, id123</parametros>
+  <codigo>
+    id121 = 205;
+    id122 = id121 + 82;
+    <if>
+      <condicion>id121 < id122 and id122 < 215</condicion>
+      <codigo>
+        id123 = id122 - id121;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id121 = id121 + 1;
+      </codigo>
+      <condicion>id121 < 215</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id124, id125, id126</parametros>
+  <codigo>
+    id124 = 210;
+    id125 = id124 + 84;
+    <if>
+      <condicion>id124 < id125 and id125 < 220</condicion>
+      <codigo>
+        id126 = id125 - id124;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id124 = id124 + 1;
+      </codigo>
+      <condicion>id124 < 220</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id127, id128, id129</parametros>
+  <codigo>
+    id127 = 215;
+    id128 = id127 + 86;
+    <if>
+      <condicion>id127 < id128 and id128 < 225</condicion>
+      <codigo>
+        id129 = id128 - id127;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id127 = id127 + 1;
+      </codigo>
+      <condicion>id127 < 225</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id130, id131, id132</parametros>
+  <codigo>
+    id130 = 220;
+    id131 = id130 + 88;
+    <if>
+      <condicion>id130 < id131 and id131 < 230</condicion>
+      <codigo>
+        id132 = id131 - id130;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id130 = id130 + 1;
+      </codigo>
+      <condicion>id130 < 230</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id133, id134, id135</parametros>
+  <codigo>
+    id133 = 225;
+    id134 = id133 + 90;
+    <if>
+      <condicion>id133 < id134 and id134 < 235</condicion>
+      <codigo>
+        id135 = id134 - id133;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id133 = id133 + 1;
+      </codigo>
+      <condicion>id133 < 235</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id136, id137, id138</parametros>
+  <codigo>
+    id136 = 230;
+    id137 = id136 + 92;
+    <if>
+      <condicion>id136 < id137 and id137 < 240</condicion>
+      <codigo>
+        id138 = id137 - id136;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id136 = id136 + 1;
+      </codigo>
+      <condicion>id136 < 240</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id139, id140, id141</parametros>
+  <codigo>
+    id139 = 235;
+    id140 = id139 + 94;
+    <if>
+      <condicion>id139 < id140 and id140 < 245</condicion>
+      <codigo>
+        id141 = id140 - id139;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id139 = id139 + 1;
+      </codigo>
+      <condicion>id139 < 245</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id142, id143, id144</parametros>
+  <codigo>
+    id142 = 240;
+    id143 = id142 + 96;
+    <if>
+      <condicion>id142 < id143 and id143 < 250</condicion>
+      <codigo>
+        id144 = id143 - id142;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id142 = id142 + 1;
+      </codigo>
+      <condicion>id142 < 250</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id145, id146, id147</parametros>
+  <codigo>
+    id145 = 245;
+    id146 = id145 + 98;
+    <if>
+      <condicion>id145 < id146 and id146 < 255</condicion>
+      <codigo>
+        id147 = id146 - id145;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id145 = id145 + 1;
+      </codigo>
+      <condicion>id145 < 255</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id148, id149, id150</parametros>
+  <codigo>
+    id148 = 250;
+    id149 = id148 + 100;
+    <if>
+      <condicion>id148 < id149 and id149 < 260</condicion>
+      <codigo>
+        id150 = id149 - id148;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id148 = id148 + 1;
+      </codigo>
+      <condicion>id148 < 260</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id151, id152, id153</parametros>
+  <codigo>
+    id151 = 255;
+    id152 = id151 + 102;
+    <if>
+      <condicion>id151 < id152 and id152 < 265</condicion>
+      <codigo>
+        id153 = id152 - id151;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id151 = id151 + 1;
+      </codigo>
+      <condicion>id151 < 265</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id154, id155, id156</parametros>
+  <codigo>
+    id154 = 260;
+    id155 = id154 + 104;
+    <if>
+      <condicion>id154 < id155 and id155 < 270</condicion>
+      <codigo>
+        id156 = id155 - id154;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id154 = id154 + 1;
+      </codigo>
+      <condicion>id154 < 270</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id157, id158, id159</parametros>
+  <codigo>
+    id157 = 265;
+    id158 = id157 + 106;
+    <if>
+      <condicion>id157 < id158 and id158 < 275</condicion>
+      <codigo>
+        id159 = id158 - id157;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id157 = id157 + 1;
+      </codigo>
+      <condicion>id157 < 275</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id160, id161, id162</parametros>
+  <codigo>
+    id160 = 270;
+    id161 = id160 + 108;
+    <if>
+      <condicion>id160 < id161 and id161 < 280</condicion>
+      <codigo>
+        id162 = id161 - id160;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id160 = id160 + 1;
+      </codigo>
+      <condicion>id160 < 280</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id163, id164, id165</parametros>
+  <codigo>
+    id163 = 275;
+    id164 = id163 + 110;
+    <if>
+      <condicion>id163 < id164 and id164 < 285</condicion>
+      <codigo>
+        id165 = id164 - id163;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id163 = id163 + 1;
+      </codigo>
+      <condicion>id163 < 285</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id166, id167, id168</parametros>
+  <codigo>
+    id166 = 280;
+    id167 = id166 + 112;
+    <if>
+      <condicion>id166 < id167 and id167 < 290</condicion>
+      <codigo>
+        id168 = id167 - id166;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id166 = id166 + 1;
+      </codigo>
+      <condicion>id166 < 290</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id169, id170, id171</parametros>
+  <codigo>
+    id169 = 285;
+    id170 = id169 + 114;
+    <if>
+      <condicion>id169 < id170 and id170 < 295</condicion>
+      <codigo>
+        id171 = id170 - id169;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id169 = id169 + 1;
+      </codigo>
+      <condicion>id169 < 295</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id172, id173, id174</parametros>
+  <codigo>
+    id172 = 290;
+    id173 = id172 + 116;
+    <if>
+      <condicion>id172 < id173 and id173 < 300</condicion>
+      <codigo>
+        id174 = id173 - id172;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id172 = id172 + 1;
+      </codigo>
+      <condicion>id172 < 300</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id175, id176, id177</parametros>
+  <codigo>
+    id175 = 295;
+    id176 = id175 + 118;
+    <if>
+      <condicion>id175 < id176 and id176 < 305</condicion>
+      <codigo>
+        id177 = id176 - id175;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id175 = id175 + 1;
+      </codigo>
+      <condicion>id175 < 305</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id178, id179, id180</parametros>
+  <codigo>
+    id178 = 300;
+    id179 = id178 + 120;
+    <if>
+      <condicion>id178 < id179 and id179 < 310</condicion>
+      <codigo>
+        id180 = id179 - id178;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id178 = id178 + 1;
+      </codigo>
+      <condicion>id178 < 310</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id181, id182, id183</parametros>
+  <codigo>
+    id181 = 305;
+    id182 = id181 + 122;
+    <if>
+      <condicion>id181 < id182 and id182 < 315</condicion>
+      <codigo>
+        id183 = id182 - id181;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id181 = id181 + 1;
+      </codigo>
+      <condicion>id181 < 315</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id184, id185, id186</parametros>
+  <codigo>
+    id184 = 310;
+    id185 = id184 + 124;
+    <if>
+      <condicion>id184 < id185 and id185 < 320</condicion>
+      <codigo>
+        id186 = id185 - id184;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id184 = id184 + 1;
+      </codigo>
+      <condicion>id184 < 320</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id187, id188, id189</parametros>
+  <codigo>
+    id187 = 315;
+    id188 = id187 + 126;
+    <if>
+      <condicion>id187 < id188 and id188 < 325</condicion>
+      <codigo>
+        id189 = id188 - id187;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id187 = id187 + 1;
+      </codigo>
+      <condicion>id187 < 325</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id190, id191, id192</parametros>
+  <codigo>
+    id190 = 320;
+    id191 = id190 + 128;
+    <if>
+      <condicion>id190 < id191 and id191 < 330</condicion>
+      <codigo>
+        id192 = id191 - id190;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id190 = id190 + 1;
+      </codigo>
+      <condicion>id190 < 330</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id193, id194, id195</parametros>
+  <codigo>
+    id193 = 325;
+    id194 = id193 + 130;
+    <if>
+      <condicion>id193 < id194 and id194 < 335</condicion>
+      <codigo>
+        id195 = id194 - id193;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id193 = id193 + 1;
+      </codigo>
+      <condicion>id193 < 335</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id196, id197, id198</parametros>
+  <codigo>
+    id196 = 330;
+    id197 = id196 + 132;
+    <if>
+      <condicion>id196 < id197 and id197 < 340</condicion>
+      <codigo>
+        id198 = id197 - id196;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id196 = id196 + 1;
+      </codigo>
+      <condicion>id196 < 340</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id199, id200, id201</parametros>
+  <codigo>
+    id199 = 335;
+    id200 = id199 + 134;
+    <if>
+      <condicion>id199 < id200 and id200 < 345</condicion>
+      <codigo>
+        id201 = id200 - id199;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id199 = id199 + 1;
+      </codigo>
+      <condicion>id199 < 345</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id202, id203, id204</parametros>
+  <codigo>
+    id202 = 340;
+    id203 = id202 + 136;
+    <if>
+      <condicion>id202 < id203 and id203 < 350</condicion>
+      <codigo>
+        id204 = id203 - id202;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id202 = id202 + 1;
+      </codigo>
+      <condicion>id202 < 350</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id205, id206, id207</parametros>
+  <codigo>
+    id205 = 345;
+    id206 = id205 + 138;
+    <if>
+      <condicion>id205 < id206 and id206 < 355</condicion>
+      <codigo>
+        id207 = id206 - id205;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id205 = id205 + 1;
+      </codigo>
+      <condicion>id205 < 355</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id208, id209, id210</parametros>
+  <codigo>
+    id208 = 350;
+    id209 = id208 + 140;
+    <if>
+      <condicion>id208 < id209 and id209 < 360</condicion>
+      <codigo>
+        id210 = id209 - id208;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id208 = id208 + 1;
+      </codigo>
+      <condicion>id208 < 360</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id211, id212, id213</parametros>
+  <codigo>
+    id211 = 355;
+    id212 = id211 + 142;
+    <if>
+      <condicion>id211 < id212 and id212 < 365</condicion>
+      <codigo>
+        id213 = id212 - id211;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id211 = id211 + 1;
+      </codigo>
+      <condicion>id211 < 365</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id214, id215, id216</parametros>
+  <codigo>
+    id214 = 360;
+    id215 = id214 + 144;
+    <if>
+      <condicion>id214 < id215 and id215 < 370</condicion>
+      <codigo>
+        id216 = id215 - id214;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id214 = id214 + 1;
+      </codigo>
+      <condicion>id214 < 370</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id217, id218, id219</parametros>
+  <codigo>
+    id217 = 365;
+    id218 = id217 + 146;
+    <if>
+      <condicion>id217 < id218 and id218 < 375</condicion>
+      <codigo>
+        id219 = id218 - id217;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id217 = id217 + 1;
+      </codigo>
+      <condicion>id217 < 375</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id220, id221, id222</parametros>
+  <codigo>
+    id220 = 370;
+    id221 = id220 + 148;
+    <if>
+      <condicion>id220 < id221 and id221 < 380</condicion>
+      <codigo>
+        id222 = id221 - id220;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id220 = id220 + 1;
+      </codigo>
+      <condicion>id220 < 380</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id223, id224, id225</parametros>
+  <codigo>
+    id223 = 375;
+    id224 = id223 + 150;
+    <if>
+      <condicion>id223 < id224 and id224 < 385</condicion>
+      <codigo>
+        id225 = id224 - id223;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id223 = id223 + 1;
+      </codigo>
+      <condicion>id223 < 385</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id226, id227, id228</parametros>
+  <codigo>
+    id226 = 380;
+    id227 = id226 + 152;
+    <if>
+      <condicion>id226 < id227 and id227 < 390</condicion>
+      <codigo>
+        id228 = id227 - id226;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id226 = id226 + 1;
+      </codigo>
+      <condicion>id226 < 390</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id229, id230, id231</parametros>
+  <codigo>
+    id229 = 385;
+    id230 = id229 + 154;
+    <if>
+      <condicion>id229 < id230 and id230 < 395</condicion>
+      <codigo>
+        id231 = id230 - id229;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id229 = id229 + 1;
+      </codigo>
+      <condicion>id229 < 395</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id232, id233, id234</parametros>
+  <codigo>
+    id232 = 390;
+    id233 = id232 + 156;
+    <if>
+      <condicion>id232 < id233 and id233 < 400</condicion>
+      <codigo>
+        id234 = id233 - id232;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id232 = id232 + 1;
+      </codigo>
+      <condicion>id232 < 400</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id235, id236, id237</parametros>
+  <codigo>
+    id235 = 395;
+    id236 = id235 + 158;
+    <if>
+      <condicion>id235 < id236 and id236 < 405</condicion>
+      <codigo>
+        id237 = id236 - id235;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id235 = id235 + 1;
+      </codigo>
+      <condicion>id235 < 405</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id238, id239, id240</parametros>
+  <codigo>
+    id238 = 400;
+    id239 = id238 + 160;
+    <if>
+      <condicion>id238 < id239 and id239 < 410</condicion>
+      <codigo>
+        id240 = id239 - id238;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id238 = id238 + 1;
+      </codigo>
+      <condicion>id238 < 410</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id241, id242, id243</parametros>
+  <codigo>
+    id241 = 405;
+    id242 = id241 + 162;
+    <if>
+      <condicion>id241 < id242 and id242 < 415</condicion>
+      <codigo>
+        id243 = id242 - id241;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id241 = id241 + 1;
+      </codigo>
+      <condicion>id241 < 415</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id244, id245, id246</parametros>
+  <codigo>
+    id244 = 410;
+    id245 = id244 + 164;
+    <if>
+      <condicion>id244 < id245 and id245 < 420</condicion>
+      <codigo>
+        id246 = id245 - id244;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id244 = id244 + 1;
+      </codigo>
+      <condicion>id244 < 420</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id247, id248, id249</parametros>
+  <codigo>
+    id247 = 415;
+    id248 = id247 + 166;
+    <if>
+      <condicion>id247 < id248 and id248 < 425</condicion>
+      <codigo>
+        id249 = id248 - id247;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id247 = id247 + 1;
+      </codigo>
+      <condicion>id247 < 425</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id250, id251, id252</parametros>
+  <codigo>
+    id250 = 420;
+    id251 = id250 + 168;
+    <if>
+      <condicion>id250 < id251 and id251 < 430</condicion>
+      <codigo>
+        id252 = id251 - id250;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id250 = id250 + 1;
+      </codigo>
+      <condicion>id250 < 430</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id253, id254, id255</parametros>
+  <codigo>
+    id253 = 425;
+    id254 = id253 + 170;
+    <if>
+      <condicion>id253 < id254 and id254 < 435</condicion>
+      <codigo>
+        id255 = id254 - id253;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id253 = id253 + 1;
+      </codigo>
+      <condicion>id253 < 435</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id256, id257, id258</parametros>
+  <codigo>
+    id256 = 430;
+    id257 = id256 + 172;
+    <if>
+      <condicion>id256 < id257 and id257 < 440</condicion>
+      <codigo>
+        id258 = id257 - id256;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id256 = id256 + 1;
+      </codigo>
+      <condicion>id256 < 440</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id259, id260, id261</parametros>
+  <codigo>
+    id259 = 435;
+    id260 = id259 + 174;
+    <if>
+      <condicion>id259 < id260 and id260 < 445</condicion>
+      <codigo>
+        id261 = id260 - id259;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id259 = id259 + 1;
+      </codigo>
+      <condicion>id259 < 445</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id262, id263, id264</parametros>
+  <codigo>
+    id262 = 440;
+    id263 = id262 + 176;
+    <if>
+      <condicion>id262 < id263 and id263 < 450</condicion>
+      <codigo>
+        id264 = id263 - id262;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id262 = id262 + 1;
+      </codigo>
+      <condicion>id262 < 450</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id265, id266, id267</parametros>
+  <codigo>
+    id265 = 445;
+    id266 = id265 + 178;
+    <if>
+      <condicion>id265 < id266 and id266 < 455</condicion>
+      <codigo>
+        id267 = id266 - id265;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id265 = id265 + 1;
+      </codigo>
+      <condicion>id265 < 455</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id268, id269, id270</parametros>
+  <codigo>
+    id268 = 450;
+    id269 = id268 + 180;
+    <if>
+      <condicion>id268 < id269 and id269 < 460</condicion>
+      <codigo>
+        id270 = id269 - id268;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id268 = id268 + 1;
+      </codigo>
+      <condicion>id268 < 460</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id271, id272, id273</parametros>
+  <codigo>
+    id271 = 455;
+    id272 = id271 + 182;
+    <if>
+      <condicion>id271 < id272 and id272 < 465</condicion>
+      <codigo>
+        id273 = id272 - id271;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id271 = id271 + 1;
+      </codigo>
+      <condicion>id271 < 465</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id274, id275, id276</parametros>
+  <codigo>
+    id274 = 460;
+    id275 = id274 + 184;
+    <if>
+      <condicion>id274 < id275 and id275 < 470</condicion>
+      <codigo>
+        id276 = id275 - id274;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id274 = id274 + 1;
+      </codigo>
+      <condicion>id274 < 470</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id277, id278, id279</parametros>
+  <codigo>
+    id277 = 465;
+    id278 = id277 + 186;
+    <if>
+      <condicion>id277 < id278 and id278 < 475</condicion>
+      <codigo>
+        id279 = id278 - id277;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id277 = id277 + 1;
+      </codigo>
+      <condicion>id277 < 475</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id280, id281, id282</parametros>
+  <codigo>
+    id280 = 470;
+    id281 = id280 + 188;
+    <if>
+      <condicion>id280 < id281 and id281 < 480</condicion>
+      <codigo>
+        id282 = id281 - id280;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id280 = id280 + 1;
+      </codigo>
+      <condicion>id280 < 480</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id283, id284, id285</parametros>
+  <codigo>
+    id283 = 475;
+    id284 = id283 + 190;
+    <if>
+      <condicion>id283 < id284 and id284 < 485</condicion>
+      <codigo>
+        id285 = id284 - id283;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id283 = id283 + 1;
+      </codigo>
+      <condicion>id283 < 485</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id286, id287, id288</parametros>
+  <codigo>
+    id286 = 480;
+    id287 = id286 + 192;
+    <if>
+      <condicion>id286 < id287 and id287 < 490</condicion>
+      <codigo>
+        id288 = id287 - id286;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id286 = id286 + 1;
+      </codigo>
+      <condicion>id286 < 490</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id289, id290, id291</parametros>
+  <codigo>
+    id289 = 485;
+    id290 = id289 + 194;
+    <if>
+      <condicion>id289 < id290 and id290 < 495</condicion>
+      <codigo>
+        id291 = id290 - id289;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id289 = id289 + 1;
+      </codigo>
+      <condicion>id289 < 495</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id292, id293, id294</parametros>
+  <codigo>
+    id292 = 490;
+    id293 = id292 + 196;
+    <if>
+      <condicion>id292 < id293 and id293 < 500</condicion>
+      <codigo>
+        id294 = id293 - id292;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id292 = id292 + 1;
+      </codigo>
+      <condicion>id292 < 500</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id295, id296, id297</parametros>
+  <codigo>
+    id295 = 495;
+    id296 = id295 + 198;
+    <if>
+      <condicion>id295 < id296 and id296 < 505</condicion>
+      <codigo>
+        id297 = id296 - id295;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id295 = id295 + 1;
+      </codigo>
+      <condicion>id295 < 505</condicion>
+    </do>
+  </codigo>
+</funcion>
+
+<funcion>
+  <parametros>id298, id299, id300</parametros>
+  <codigo>
+    id298 = 500;
+    id299 = id298 + 200;
+    <if>
+      <condicion>id298 < id299 and id299 < 510</condicion>
+      <codigo>
+        id300 = id299 - id298;
+      </codigo>
+    </if>
+    <do>
+      <codigo>
+        id298 = id298 + 1;
+      </codigo>
+      <condicion>id298 < 510</condicion>
+    </do>
+  </codigo>
+</funcion>
+
