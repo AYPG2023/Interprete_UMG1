@@ -17,8 +17,6 @@ import sys
 from pathlib import Path
 from typing import Dict, List
 
-FUNC_RE = re.compile(r"<funcion>\s*(.*?)\s*</funcion>", re.S)
-PARAM_RE = re.compile(r"<parametros>(.*?)</parametros>", re.S)
 ID_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 NUM_RE = re.compile(r"^\d+$")
 
@@ -29,8 +27,8 @@ NUM_RE = re.compile(r"^\d+$")
 TOKEN_SPECIFICATION = [
     ("TAG_CLOSE", r"</[a-zA-Z]+>"),
     ("TAG_OPEN", r"<[a-zA-Z]+>"),
-    ("LOGICAL_AND", r"&&|(?i:\band\b)"),   # <-- agrega 'and'
-    ("LOGICAL_OR",  r"\|\||(?i:\bor\b)"),
+    ("LOGICAL_AND", r"&&|(?i:\band\b)"),
+    ("LOGICAL_OR", r"\|\||(?i:\bor\b)"),
     ("NE", r"!="),
     ("EQ", r"=="),
     ("GE", r">="),
@@ -43,17 +41,17 @@ TOKEN_SPECIFICATION = [
     ("MINUS", r"-"),
     ("TIMES", r"\*"),
     ("DIVIDE", r"/"),
-    ("MOD", r"%"),  
+    ("MOD", r"%"),
     ("LPAREN", r"\("),
     ("RPAREN", r"\)"),
     ("COMMA", r","),
     ("SEMICOLON", r";"),
-    ("STRING", r"\"([^\"\\]|\\.)*\""),
+    ("STRING", r'"([^"\\]|\\.)*"'),
     ("NUMBER", r"\d+"),
     ("IDENT", r"[a-zA-Z_][a-zA-Z0-9_]*"),
     ("NEWLINE", r"\n"),
     ("SKIP", r"[ \t\r]+"),
-    ("SYMBOL", r"[@#$]"),
+    ("SYMBOL", r"[@#$%.,]"),
     ("MISMATCH", r"."),
 ]
 
@@ -139,52 +137,57 @@ def group_errors_by_line(errors: List[str]) -> Dict[int, int]:
 def analyze_parameter_blocks(code: str) -> List[ParameterBlockAnalysis]:
     analyses: List[ParameterBlockAnalysis] = []
 
-    for func_match in FUNC_RE.finditer(code):
-        func_inner_start = func_match.start(1)
-        func_content = func_match.group(1)
+    for match in re.finditer(r"<parametros>", code):
+        params_start = match.end()
+        closing_match = re.search(r"</parametros>", code[params_start:])
 
-        for param_match in PARAM_RE.finditer(func_content):
-            params_content = param_match.group(1)
-            global_start = func_inner_start + param_match.start(1)
+        if closing_match:
+            params_end = params_start + closing_match.start()
+        else:
+            next_tag = code.find("<", params_start)
+            params_end = next_tag if next_tag != -1 else len(code)
 
-            valid_count = 0
-            invalid_count = 0
-            errors: List[str] = []
+        params_content = code[params_start:params_end]
+        global_start = params_start
 
-            if params_content.strip() == "" and "," not in params_content:
-                analyses.append(ParameterBlockAnalysis(valid_count, invalid_count, errors))
-                continue
+        valid_count = 0
+        invalid_count = 0
+        errors: List[str] = []
 
-            cursor = 0
-            parts = params_content.split(",")
-            for part in parts:
-                token_start = global_start + cursor
-                stripped = part.strip()
-
-                if stripped:
-                    leading = len(part) - len(part.lstrip())
-                    position = token_start + leading
-                else:
-                    position = token_start
-
-                line = code.count("\n", 0, position) + 1
-
-                if stripped == "":
-                    invalid_count += 1
-                    errors.append(
-                        f"Error sintáctico: parámetro vacío en línea {line}."
-                    )
-                elif ID_RE.match(stripped) or NUM_RE.match(stripped):
-                    valid_count += 1
-                else:
-                    invalid_count += 1
-                    errors.append(
-                        f"Error sintáctico: parámetro inválido '{stripped}' en línea {line}."
-                    )
-
-                cursor += len(part) + 1
-
+        if params_content.strip() == "" and "," not in params_content:
             analyses.append(ParameterBlockAnalysis(valid_count, invalid_count, errors))
+            continue
+
+        cursor = 0
+        parts = params_content.split(",")
+        for part in parts:
+            token_start = global_start + cursor
+            stripped = part.strip()
+
+            if stripped:
+                leading = len(part) - len(part.lstrip())
+                position = token_start + leading
+            else:
+                position = token_start
+
+            line = code.count("\n", 0, position) + 1
+
+            if stripped == "":
+                invalid_count += 1
+                errors.append(
+                    f"Error sintáctico: parámetro vacío en línea {line}."
+                )
+            elif ID_RE.match(stripped) or NUM_RE.match(stripped):
+                valid_count += 1
+            else:
+                invalid_count += 1
+                errors.append(
+                    f"Error sintáctico: parámetro inválido '{stripped}' en línea {line}."
+                )
+
+            cursor += len(part) + 1
+
+        analyses.append(ParameterBlockAnalysis(valid_count, invalid_count, errors))
 
     return analyses
 
@@ -254,12 +257,12 @@ class Parser:
             self.context_stack.append("funcion")
             try:
                 params_valid = self.parse_parameters()
-                self.parse_code_block()
+                code_valid = self.parse_code_block()
             finally:
                 if self.context_stack and self.context_stack[-1] == "funcion":
                     self.context_stack.pop()
             self.expect_tag("funcion", closing=True)
-            if not params_valid:
+            if not params_valid or not code_valid:
                 is_valid = False
         except ParserError as exc:
             is_valid = False
@@ -274,7 +277,14 @@ class Parser:
             self.stats["Funciones inválidas"] += 1
 
     def parse_parameters(self) -> bool:
-        self.expect_tag("parametros", closing=False)
+        start_line = self.current_token().line
+        try:
+            self.expect_tag("parametros", closing=False)
+        except ParserError as exc:
+            self.errors.append(
+                f"Error sintáctico: apertura de <parametros> inválida (línea {start_line}). Detalle: {exc}"
+            )
+            return False
 
         if self.parameter_analysis_index < len(self.parameter_analyses):
             analysis = self.parameter_analyses[self.parameter_analysis_index]
@@ -282,38 +292,72 @@ class Parser:
         else:
             analysis = ParameterBlockAnalysis(0, 0, [])
 
+        missing_closing = False
+
         while True:
             tok = self.current_token()
 
             if tok.type == "EOF":
-                raise ParserError("fin de archivo inesperado en <parametros>.")
+                missing_closing = True
+                break
 
             if tok.type == "TAG_CLOSE" and self.tag_name(tok) == "parametros":
+                self.advance()
+                break
+
+            if tok.type in {"TAG_OPEN", "TAG_CLOSE"}:
+                missing_closing = True
                 break
 
             self.advance()
 
-        self.expect_tag("parametros", closing=True)
+        if missing_closing:
+            self.errors.append(
+                f"Error sintáctico: falta </parametros> correspondiente a la apertura en línea {start_line}. Se cerró automáticamente."
+            )
+
         self.stats["Parámetros válidos"] += analysis.valid_count
         self.stats["Parámetros inválidos"] += analysis.invalid_count
         self.errors.extend(analysis.errors)
-        return analysis.invalid_count == 0
+        return analysis.invalid_count == 0 and not missing_closing
 
-    def parse_code_block(self) -> None:
+    def parse_code_block(self) -> bool:
         start_line = self.current_token().line
-        self.expect_tag("codigo", closing=False)
+
+        try:
+            self.expect_tag("codigo", closing=False)
+        except ParserError as exc:
+            self.errors.append(
+                f"Error sintáctico: apertura de <codigo> inválida (línea {start_line}). Detalle: {exc}"
+            )
+            return False
+
         self.context_stack.append("codigo")
+        is_valid = True
+        missing_closing = False
 
         try:
             while True:
                 token = self.current_token()
 
-                if token.type == "TAG_CLOSE" and self.tag_name(token) == "codigo":
-                    break
                 if token.type == "EOF":
-                    raise ParserError(
-                        f"fin de archivo inesperado: falta </codigo> (línea {start_line})."
+                    missing_closing = True
+                    break
+
+                if token.type == "TAG_CLOSE":
+                    tag = self.tag_name(token)
+                    if tag == "codigo":
+                        self.advance()
+                        break
+                    if tag in {"funcion", "if", "do"}:
+                        missing_closing = True
+                        break
+                    self.errors.append(
+                        f"Error sintáctico: cierre inesperado </{tag}> dentro de <codigo> (línea {token.line})."
                     )
+                    is_valid = False
+                    self.advance()
+                    continue
 
                 if token.type == "IDENT":
                     self.parse_assignment()
@@ -327,22 +371,40 @@ class Parser:
                     if tag == "do":
                         self.parse_do()
                         continue
+                    if tag == "funcion":
+                        self.parse_function()
+                        continue
+                    if tag == "codigo":
+                        self.errors.append(
+                            f"Error sintáctico: bloque <codigo> anidado inesperado en línea {token.line}."
+                        )
+                        is_valid = False
+                        self.parse_code_block()
+                        continue
 
                     self.errors.append(
                         f"Error sintáctico: etiqueta <{tag}> no permitida dentro de <codigo> (línea {token.line})."
                     )
+                    is_valid = False
                     self.skip_unknown_tag(tag)
                     continue
 
                 self.errors.append(
                     f"Error sintáctico: elemento inesperado '{token.value}' dentro de <codigo> (línea {token.line})."
                 )
+                is_valid = False
                 self.advance()
         finally:
             if self.context_stack and self.context_stack[-1] == "codigo":
                 self.context_stack.pop()
 
-        self.expect_tag("codigo", closing=True)
+        if missing_closing:
+            self.errors.append(
+                f"Error sintáctico: falta </codigo> correspondiente a la apertura en línea {start_line}. Se cerró automáticamente."
+            )
+            is_valid = False
+
+        return is_valid and not missing_closing
 
     def parse_assignment(self) -> None:
         start_line = self.current_token().line
@@ -393,12 +455,12 @@ class Parser:
             self.context_stack.append("if")
             try:
                 condition_valid = self.parse_condition()
-                self.parse_code_block()
+                code_valid = self.parse_code_block()
             finally:
                 if self.context_stack and self.context_stack[-1] == "if":
                     self.context_stack.pop()
             self.expect_tag("if", closing=True)
-            if not condition_valid:
+            if not condition_valid or not code_valid:
                 is_valid = False
         except ParserError as exc:
             is_valid = False
@@ -416,17 +478,35 @@ class Parser:
         start_line = self.current_token().line
         is_valid = True
 
+        condition_valid = True
+        code_valid = True
+
         try:
             self.expect_tag("do", closing=False)
             self.context_stack.append("do")
             try:
-                self.parse_code_block()
-                condition_valid = self.parse_condition()
+                next_token = self.current_token()
+                if next_token.type == "TAG_OPEN" and self.tag_name(next_token) == "condicion":
+                    is_valid = False
+                    self.errors.append(
+                        f"Error sintáctico: se encontró <condicion> antes de <codigo> en <do> (línea {next_token.line})."
+                    )
+                    condition_valid = self.parse_condition()
+                    if self.current_token().type == "TAG_OPEN" and self.tag_name(self.current_token()) == "codigo":
+                        code_valid = self.parse_code_block()
+                    else:
+                        code_valid = False
+                        self.errors.append(
+                            f"Error sintáctico: falta <codigo> dentro de <do> iniciado en línea {start_line}."
+                        )
+                else:
+                    code_valid = self.parse_code_block()
+                    condition_valid = self.parse_condition()
             finally:
                 if self.context_stack and self.context_stack[-1] == "do":
                     self.context_stack.pop()
             self.expect_tag("do", closing=True)
-            if not condition_valid:
+            if not condition_valid or not code_valid:
                 is_valid = False
         except ParserError as exc:
             is_valid = False
