@@ -29,8 +29,8 @@ NUM_RE = re.compile(r"^\d+$")
 TOKEN_SPECIFICATION = [
     ("TAG_CLOSE", r"</[a-zA-Z]+>"),
     ("TAG_OPEN", r"<[a-zA-Z]+>"),
-    ("LOGICAL_AND", r"&&"),
-    ("LOGICAL_OR", r"\|\|"),
+    ("LOGICAL_AND", r"&&|(?i:\band\b)"),   # <-- agrega 'and'
+    ("LOGICAL_OR",  r"\|\||(?i:\bor\b)"),
     ("NE", r"!="),
     ("EQ", r"=="),
     ("GE", r">="),
@@ -38,19 +38,22 @@ TOKEN_SPECIFICATION = [
     ("ASSIGN", r"="),
     ("GT", r">"),
     ("LT", r"<"),
-    ("LOGICAL_NOT", r"!"),
+    ("LOGICAL_NOT", r"!|(?i:\bnot\b)"),
     ("PLUS", r"\+"),
     ("MINUS", r"-"),
     ("TIMES", r"\*"),
     ("DIVIDE", r"/"),
+    ("MOD", r"%"),  
     ("LPAREN", r"\("),
     ("RPAREN", r"\)"),
     ("COMMA", r","),
     ("SEMICOLON", r";"),
+    ("STRING", r"\"([^\"\\]|\\.)*\""),
     ("NUMBER", r"\d+"),
     ("IDENT", r"[a-zA-Z_][a-zA-Z0-9_]*"),
     ("NEWLINE", r"\n"),
     ("SKIP", r"[ \t\r]+"),
+    ("SYMBOL", r"[@#$]"),
     ("MISMATCH", r"."),
 ]
 
@@ -101,6 +104,9 @@ def tokenize(code: str) -> LexerResult:
             column = 1
             continue
         if kind == "SKIP":
+            column += len(value)
+            continue
+        if kind == "SYMBOL":
             column += len(value)
             continue
         if kind == "MISMATCH":
@@ -467,7 +473,7 @@ class Parser:
 
     def parse_assignment_term(self) -> None:
         token = self.current_token()
-        if token.type in {"IDENT", "NUMBER"}:
+        if token.type in {"IDENT", "NUMBER", "STRING"}:
             self.advance()
             return
         raise ParserError(
@@ -515,7 +521,7 @@ class Parser:
 
     def parse_primary(self) -> None:
         token = self.current_token()
-        if token.type in {"IDENT", "NUMBER"}:
+        if token.type in {"IDENT", "NUMBER", "STRING"}:
             self.advance()
             return
         if token.type == "LPAREN":
